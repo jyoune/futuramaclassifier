@@ -1,0 +1,274 @@
+Baseline: binary unigrams MultinomialNB no smoothing
+accuracy:  0.3185595567867036
+              precision    recall  f1-score   support
+
+         Amy       0.10      0.30      0.15        97
+      Bender       0.38      0.34      0.36       339
+  Farnsworth       0.31      0.19      0.24       145
+         Fry       0.41      0.47      0.44       409
+      Hermes       0.37      0.11      0.17        91
+       Leela       0.34      0.28      0.30       277
+    Zoidberg       0.31      0.13      0.18        86
+
+    accuracy                           0.32      1444
+   macro avg       0.32      0.26      0.26      1444
+weighted avg       0.35      0.32      0.32      1444
+
+binary Unigrams + Bigrams MultinomialNB no smoothing
+0.2098337950138504
+              precision    recall  f1-score   support
+
+         Amy       0.08      0.59      0.13        97
+      Bender       0.37      0.20      0.26       339
+  Farnsworth       0.23      0.10      0.14       145
+         Fry       0.43      0.29      0.35       409
+      Hermes       0.18      0.02      0.04        91
+       Leela       0.27      0.14      0.19       277
+    Zoidberg       0.25      0.06      0.09        86
+
+    accuracy                           0.21      1444
+   macro avg       0.26      0.20      0.17      1444
+weighted avg       0.31      0.21      0.23      1444
+
+ binary Unigrams + top100 bigrams MultinomialNB no smoothing
+accuracy:  0.3192520775623269
+              precision    recall  f1-score   support
+
+         Amy       0.10      0.32      0.16        97
+      Bender       0.39      0.34      0.36       339
+  Farnsworth       0.29      0.19      0.23       145
+         Fry       0.41      0.46      0.44       409
+      Hermes       0.33      0.10      0.15        91
+       Leela       0.34      0.28      0.30       277
+    Zoidberg       0.30      0.13      0.18        86
+
+    accuracy                           0.32      1444
+   macro avg       0.31      0.26      0.26      1444
+weighted avg       0.35      0.32      0.32      1444
+
+ binary Unigrams + top100 bigrams & trigrams MultinomialNB no smoothing
+accuracy:  0.314404432132964
+              precision    recall  f1-score   support
+
+         Amy       0.10      0.31      0.15        97
+      Bender       0.39      0.34      0.36       339
+  Farnsworth       0.28      0.19      0.22       145
+         Fry       0.41      0.46      0.43       409
+      Hermes       0.33      0.10      0.15        91
+       Leela       0.33      0.27      0.29       277
+    Zoidberg       0.30      0.13      0.18        86
+
+    accuracy                           0.31      1444
+   macro avg       0.30      0.26      0.26      1444
+weighted avg       0.34      0.31      0.32      1444
+
+
+
+MNB with alpha_range = [x / 100 for x in range(10, 110, 10)]
+ngram: 1 counts: True 0.4 0.39681440443213295
+ngram: 1 counts: False 0.5 0.3940443213296399
+ngram: 2 counts: True 0.8 0.3400277008310249
+ngram: 2 counts: False 0.9 0.3407202216066482
+ngram: 3 counts: True 0.8 0.31301939058171746
+ngram: 3 counts: False 0.5 0.31163434903047094
+Unigram +  use_bigrams: True use_trigrams: True Counts: True use100: True 0.9 0.4002770083102493
+Unigram +  use_bigrams: True use_trigrams: True Counts: True use100: False 0.5 0.3621883656509695
+Unigram +  use_bigrams: True use_trigrams: False Counts: True use100: True 0.7 0.4009695290858726
+Unigram +  use_bigrams: True use_trigrams: False Counts: True use100: False 0.4 0.37049861495844877
+Unigram +  use_bigrams: False use_trigrams: True Counts: True use100: True 0.4 0.39681440443213295
+Unigram +  use_bigrams: False use_trigrams: True Counts: True use100: False 0.4 0.39681440443213295
+Unigram +  use_bigrams: False use_trigrams: False Counts: True use100: True 0.4 0.39681440443213295
+Unigram +  use_bigrams: False use_trigrams: False Counts: True use100: False 0.4 0.39681440443213295
+Unigram +  use_bigrams: True use_trigrams: True Counts: False use100: True 0.6 0.39958448753462605
+Unigram +  use_bigrams: True use_trigrams: True Counts: False use100: False 0.8 0.3656509695290859
+Unigram +  use_bigrams: True use_trigrams: False Counts: False use100: True 0.7 0.40166204986149584
+Unigram +  use_bigrams: True use_trigrams: False Counts: False use100: False 0.5 0.37742382271468145
+Unigram +  use_bigrams: False use_trigrams: True Counts: False use100: True 0.5 0.3940443213296399
+Unigram +  use_bigrams: False use_trigrams: True Counts: False use100: False 0.5 0.3940443213296399
+Unigram +  use_bigrams: False use_trigrams: False Counts: False use100: True 0.5 0.3940443213296399
+Unigram +  use_bigrams: False use_trigrams: False Counts: False use100: False 0.5 0.3940443213296399
+Best:
+Unigram +  use_bigrams: True use_trigrams: False Counts: False use100: True0.40166204986149584
+
+More specific alpha: alpha2 = [x/100 for x in range(40, 105, 5)]
+
+ngram: 1 counts: True  alpha: 0.4 0.39681440443213295
+ngram: 1 counts: False  alpha: 0.55 0.3954293628808864
+ngram: 2 counts: True  alpha: 0.55 0.3400277008310249
+ngram: 2 counts: False  alpha: 0.55 0.34210526315789475
+ngram: 3 counts: True  alpha: 0.8 0.31301939058171746
+ngram: 3 counts: False  alpha: 0.5 0.31163434903047094
+Unigram +  use_bigrams: True use_trigrams: True Counts: True use100: True  alpha: 0.85 0.4009695290858726
+Unigram +  use_bigrams: True use_trigrams: True Counts: True use100: False  alpha: 0.45 0.3628808864265928
+Unigram +  use_bigrams: True use_trigrams: False Counts: True use100: True  alpha: 0.75 0.4023545706371191
+Unigram +  use_bigrams: True use_trigrams: False Counts: True use100: False  alpha: 0.45 0.37119113573407203
+Unigram +  use_bigrams: False use_trigrams: True Counts: True use100: True  alpha: 0.4 0.39681440443213295
+Unigram +  use_bigrams: False use_trigrams: True Counts: True use100: False  alpha: 0.4 0.39681440443213295
+Unigram +  use_bigrams: False use_trigrams: False Counts: True use100: True  alpha: 0.4 0.39681440443213295
+Unigram +  use_bigrams: False use_trigrams: False Counts: True use100: False  alpha: 0.4 0.39681440443213295
+Unigram +  use_bigrams: True use_trigrams: True Counts: False use100: True  alpha: 0.75 0.4002770083102493
+Unigram +  use_bigrams: True use_trigrams: True Counts: False use100: False  alpha: 0.8 0.3656509695290859
+Unigram +  use_bigrams: True use_trigrams: False Counts: False use100: True  alpha: 0.55 0.40166204986149584
+Unigram +  use_bigrams: True use_trigrams: False Counts: False use100: False  alpha: 0.5 0.37742382271468145
+Unigram +  use_bigrams: False use_trigrams: True Counts: False use100: True  alpha: 0.55 0.3954293628808864
+Unigram +  use_bigrams: False use_trigrams: True Counts: False use100: False  alpha: 0.55 0.3954293628808864
+Unigram +  use_bigrams: False use_trigrams: False Counts: False use100: True  alpha: 0.55 0.3954293628808864
+Unigram +  use_bigrams: False use_trigrams: False Counts: False use100: False  alpha: 0.55 0.3954293628808864
+Best: 
+Unigram +  use_bigrams: True use_trigrams: False Counts: True use100: True alpha: 0.75 0.4023545706371191
+
+Logistic Regression: c_range = [x / 10 for x in range(5, 55, 5)]
+
+
+ngram: 1 counts: True  big_c: 0.5 0.3975069252077562
+ngram: 1 counts: False  big_c: 0.5 0.4023545706371191
+ngram: 2 counts: True  big_c: 0.5 0.33933518005540164
+ngram: 2 counts: False  big_c: 0.5 0.3400277008310249
+ngram: 3 counts: True  big_c: 0.5 0.3074792243767313
+ngram: 3 counts: False  big_c: 0.5 0.30817174515235457
+Unigram +  use_bigrams: True use_trigrams: True Counts: True use100: True  big_c: 1.5 0.389196675900277
+Unigram +  use_bigrams: True use_trigrams: True Counts: True use100: False  big_c: 0.5 0.389196675900277
+Unigram +  use_bigrams: True use_trigrams: False Counts: True use100: True  big_c: 0.5 0.38850415512465375
+Unigram +  use_bigrams: True use_trigrams: False Counts: True use100: False  big_c: 0.5 0.3898891966759003
+Unigram +  use_bigrams: False use_trigrams: True Counts: True use100: True  big_c: 0.5 0.3975069252077562
+Unigram +  use_bigrams: False use_trigrams: True Counts: True use100: False  big_c: 0.5 0.3975069252077562
+Unigram +  use_bigrams: False use_trigrams: False Counts: True use100: True  big_c: 0.5 0.3975069252077562
+Unigram +  use_bigrams: False use_trigrams: False Counts: True use100: False  big_c: 0.5 0.3975069252077562
+Unigram +  use_bigrams: True use_trigrams: True Counts: False use100: True  big_c: 0.5 0.3940443213296399
+Unigram +  use_bigrams: True use_trigrams: True Counts: False use100: False  big_c: 0.5 0.39335180055401664
+Unigram +  use_bigrams: True use_trigrams: False Counts: False use100: True  big_c: 0.5 0.39681440443213295
+Unigram +  use_bigrams: True use_trigrams: False Counts: False use100: False  big_c: 0.5 0.4002770083102493
+Unigram +  use_bigrams: False use_trigrams: True Counts: False use100: True  big_c: 0.5 0.4023545706371191
+Unigram +  use_bigrams: False use_trigrams: True Counts: False use100: False  big_c: 0.5 0.4023545706371191
+Unigram +  use_bigrams: False use_trigrams: False Counts: False use100: True  big_c: 0.5 0.4023545706371191
+Unigram +  use_bigrams: False use_trigrams: False Counts: False use100: False  big_c: 0.5 0.4023545706371191
+Best: 
+ngram: 1 counts: False big_c: 0.5 0.4023545706371191
+
+Logistic Regression (avoid non 100 trigrams, no counts, c_range = [0.1, 0.2, 0.3, 0.5, 0.75, 1.0, 1.25, 1.5, 2, 5, 10]
+
+
+ngram: 1 counts: True  big_c: 0.5 0.3975069252077562
+ngram: 1 counts: False  big_c: 0.5 0.4023545706371191
+ngram: 2 counts: True  big_c: 0.2 0.3462603878116344
+ngram: 2 counts: False  big_c: 0.2 0.34349030470914127
+ngram: 3 counts: True  big_c: 0.5 0.3074792243767313
+ngram: 3 counts: False  big_c: 0.3 0.30817174515235457
+Unigram +  use_bigrams: True use_trigrams: True Counts: False use100: True  big_c: 0.5 0.3940443213296399
+Unigram +  use_bigrams: True use_trigrams: False Counts: False use100: False  big_c: 0.5 0.4002770083102493
+Unigram +  use_bigrams: False use_trigrams: True Counts: False use100: True  big_c: 0.5 0.4023545706371191
+Unigram +  use_bigrams: False use_trigrams: False Counts: False use100: False  big_c: 0.5 0.4023545706371191
+Best:
+ngram: 1 counts: False big_c: 0.5 0.4023545706371191
+
+another round to make sure of bigrams + 100 counts c_range = [0.1, 0.2, 0.3, 0.5, 0.75, 1.0, 1.25, 1.5, 2, 5, 10]
+
+
+ngram: 1 counts: True  big_c: 0.5 0.3975069252077562
+ngram: 1 counts: False  big_c: 0.5 0.4023545706371191
+ngram: 2 counts: True  big_c: 0.2 0.3462603878116344
+ngram: 2 counts: False  big_c: 0.2 0.34349030470914127
+ngram: 3 counts: True  big_c: 0.5 0.3074792243767313
+ngram: 3 counts: False  big_c: 0.3 0.30817174515235457
+Unigram +  use_bigrams: True use_trigrams: True Counts: False use100: True  big_c: 0.5 0.3940443213296399
+Unigram +  use_bigrams: True use_trigrams: False Counts: False use100: False  big_c: 0.5 0.4002770083102493
+Unigram +  use_bigrams: True use_trigrams: False Counts: False use100: True  big_c: 0.5 0.39681440443213295
+Unigram +  use_bigrams: False use_trigrams: True Counts: False use100: True  big_c: 0.5 0.4023545706371191
+Unigram +  use_bigrams: False use_trigrams: False Counts: False use100: False  big_c: 0.5 0.4023545706371191
+Unigram +  use_bigrams: False use_trigrams: False Counts: False use100: True  big_c: 0.5 0.4023545706371191
+Best: 
+ngram: 1 counts: False big_c: 0.5 0.4023545706371191
+
+one more big c test for these same parameters c_range = [0.15, 0.25, 0.35, 0.45, 0.55]
+
+
+
+ngram: 1 counts: True  big_c: 0.55 0.3981994459833795
+ngram: 1 counts: False  big_c: 0.55 0.40304709141274236
+ngram: 2 counts: True  big_c: 0.15 0.34349030470914127
+ngram: 2 counts: False  big_c: 0.25 0.3448753462603878
+ngram: 3 counts: True  big_c: 0.25 0.30678670360110805
+ngram: 3 counts: False  big_c: 0.25 0.30886426592797783
+Unigram +  use_bigrams: True use_trigrams: True Counts: False use100: True  big_c: 0.45 0.39335180055401664
+Unigram +  use_bigrams: True use_trigrams: False Counts: False use100: False  big_c: 0.45 0.4037396121883656
+Unigram +  use_bigrams: True use_trigrams: False Counts: False use100: True  big_c: 0.35 0.3961218836565097
+Unigram +  use_bigrams: False use_trigrams: True Counts: False use100: True  big_c: 0.55 0.40304709141274236
+Unigram +  use_bigrams: False use_trigrams: False Counts: False use100: False  big_c: 0.55 0.40304709141274236
+Unigram +  use_bigrams: False use_trigrams: False Counts: False use100: True  big_c: 0.55 0.40304709141274236
+Best: 
+Unigram +  use_bigrams: True use_trigrams: False Counts: False use100: False big_c: 0.45 0.4037396121883656
+
+test the best 4:
+MNBUnigram +  use_bigrams: True use_trigrams: False Counts: False use100: True alpha: 0.7 0.40166204986149584
+MNBUnigram +  use_bigrams: True use_trigrams: False Counts: True use100: True alpha: 0.75 0.4023545706371191
+LRngram: 1 counts: False big_c: 0.5 0.4023545706371191
+LRUnigram +  use_bigrams: True use_trigrams: False Counts: False use100: False big_c: 0.45 0.4037396121883656
+Best: 
+LRUnigram +  use_bigrams: True use_trigrams: False Counts: False use100: False big_c: 0.45 0.4037396121883656
+MNBUnigram +  use_bigrams: True use_trigrams: False Counts: False use100: True alpha: 0.7 0.40166204986149584
+MNBUnigram +  use_bigrams: True use_trigrams: False Counts: True use100: True alpha: 0.75 0.4023545706371191
+LRngram: 1 counts: False big_c: 0.55 0.40304709141274236
+LRUnigram +  use_bigrams: True use_trigrams: False Counts: False use100: False big_c: 0.45 0.4037396121883656
+Best: 
+LRUnigram +  use_bigrams: True use_trigrams: False Counts: False use100: False big_c: 0.45 0.4037396121883656
+
+MNBUnigram +  use_bigrams: True use_trigrams: False Counts: False use100: True alpha: 0.7 
+              precision    recall  f1-score   support
+
+         Amy       0.40      0.02      0.04        97
+      Bender       0.41      0.47      0.44       339
+  Farnsworth       0.40      0.30      0.35       145
+         Fry       0.41      0.64      0.50       409
+      Hermes       0.80      0.04      0.08        91
+       Leela       0.37      0.39      0.38       277
+    Zoidberg       0.33      0.02      0.04        86
+
+    accuracy                           0.40      1444
+   macro avg       0.45      0.27      0.26      1444
+weighted avg       0.42      0.40      0.36      1444
+
+MNBUnigram +  use_bigrams: True use_trigrams: False Counts: True use100: True alpha: 0.75 
+              precision    recall  f1-score   support
+
+         Amy       0.40      0.02      0.04        97
+      Bender       0.40      0.47      0.43       339
+  Farnsworth       0.42      0.34      0.38       145
+         Fry       0.41      0.64      0.50       409
+      Hermes       0.75      0.03      0.06        91
+       Leela       0.38      0.37      0.38       277
+    Zoidberg       0.50      0.03      0.07        86
+
+    accuracy                           0.40      1444
+   macro avg       0.47      0.27      0.26      1444
+weighted avg       0.43      0.40      0.36      1444
+
+LRngram: 1 counts: False big_c: 0.55 
+              precision    recall  f1-score   support
+
+         Amy       0.47      0.09      0.16        97
+      Bender       0.42      0.49      0.45       339
+  Farnsworth       0.39      0.32      0.35       145
+         Fry       0.41      0.57      0.47       409
+      Hermes       0.65      0.19      0.29        91
+       Leela       0.36      0.38      0.37       277
+    Zoidberg       0.27      0.08      0.13        86
+
+    accuracy                           0.40      1444
+   macro avg       0.43      0.30      0.32      1444
+weighted avg       0.41      0.40      0.38      1444
+
+LRUnigram +  use_bigrams: True use_trigrams: False Counts: False use100: False big_c: 0.45 
+              precision    recall  f1-score   support
+
+         Amy       0.47      0.07      0.12        97
+      Bender       0.44      0.47      0.46       339
+  Farnsworth       0.45      0.34      0.39       145
+         Fry       0.42      0.59      0.49       409
+      Hermes       0.50      0.12      0.19        91
+       Leela       0.32      0.39      0.35       277
+    Zoidberg       0.38      0.07      0.12        86
+
+    accuracy                           0.40      1444
+   macro avg       0.42      0.29      0.30      1444
+weighted avg       0.41      0.40      0.38      1444
+
