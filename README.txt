@@ -3,7 +3,11 @@ train_dev_test_split.py - takes the source file "only_spoken_text.csv", creates 
 baseline.py- creates a baseline and outputs it to output.txt. Some code duplicated in main.py,
 some is changed etc.
 
-main.py- takes in train, dev, test sets in csv and turns them into dataframes. extracts features etc and puts in those dataframes. has methods for running baseline, doing dev set predictions / grid searching (and outputting results to output.txt), as well as running best models on test and reporting results. also all other methods for featurizing and vectorizing, training different models etc.
+main.py- takes in train, dev, test sets in csv and turns them into dataframes. 
+extracts features etc and puts in those dataframes. has methods for running baseline, 
+doing dev set predictions / grid searching (and outputting results to output.txt), 
+as well as running best models on test and reporting results. also all other methods for featurizing and vectorizing,
+training different models etc.
 
 output.txt- extremely messy sets of outputs (feature combos with best parameters) with accuracies etc.
 
