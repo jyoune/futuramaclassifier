@@ -9,9 +9,9 @@ doing dev set predictions / grid searching (and outputting results to output.txt
 as well as running best models on test and reporting results. also all other methods for featurizing and vectorizing,
 training different models
 
-output.txt- sets of outputs (feature combos with best parameters) with accuracies etc.
+output.txt- sets of intermediate outputs (feature combos with best parameters) with accuracies.
 
-episode_list.csv- one of two source data files. has all lines etc plus non-spoken
+episode_list.csv- one of two source data files. has all lines plus non-spoken text.
 
 only_spoken_text.csv- other of two source files. only spoken lines.
 
