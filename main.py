@@ -348,9 +348,9 @@ def featurize_single_type(data, counts: bool, n: int, top100:bool = False):
     """
     this gets the list of feature dictionaries to use with DictVectorizer.
     works up to trigrams with counts and binary.
+    Note: this performs the featurizing for only one feature type (e.g unigram, bigram, trigram)
     """
     feature_dict_list = []
-    # so far this is for unigrams
     if not top100:
         if n == 1:
             if not counts:
@@ -459,11 +459,15 @@ def featurize_single_type(data, counts: bool, n: int, top100:bool = False):
             return feature_dict_list
 
 
-# this method combines unigrams with bigrams and optionally with trigrams. also parameters for counts and
-# if you're using top 100 for features other than unigrams
 
-
+# TODO: this needs to be much cleaner. refactor so you don't need the separate single-type method above
+# TODO: also rewrite it so any combination of features is possible.
 def featurize_multi_type(data, counts: bool, other_feats_top100:bool = True, use_trigrams:bool = False):
+    """
+    this method gets the lists of feature dictionaries to use with DictVectorizer.
+    it allows for combinations of unigrams with bigrams and optionally trigrams, with parameters for
+    counts and whether the top 100 bi/trigrams should be used.
+    """
     unigram_dicts = featurize_single_type(data, counts, 1)
     combined_dict_list = []
     if other_feats_top100:
@@ -496,8 +500,8 @@ def featurize_multi_type(data, counts: bool, other_feats_top100:bool = True, use
             return combined_dict_list
 
 
-# MUST BE RUN BEFORE FEATURIZING IF YOU WANT TOP 100
 
+# MUST BE RUN BEFORE FEATURIZING IF YOU WANT TOP 100
 def find_top_100(data, n):
     """Gets the top 100 (or less) ngrams by count and adds a column in the dataframe for it."""
     counts = ngram_counts(data, n)
@@ -533,10 +537,9 @@ def get_ngrams(tokens, n):
     return ngram_list
 
 
-# keeps counts for ngrams seen in all data. likely affected by whether features are binary or counts
-# so far works for 1-3grams
-
-
+# keeps counts for ngrams seen in all data. counts change depending
+# on if model is using binary features or counts, as the list of
+# n-grams will be smaller.
 def ngram_counts(data, n):
     if n == 1:
         all_unigrams = []
